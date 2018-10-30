@@ -94,3 +94,19 @@ Public abstract class PizzaStore {
 "A factory method handles object creation and encapsulates it in a subclass.
 This decouples the client code in the superclass from the object creation
 code in the subclass."
+
+
+## The Dependency Inversion Principle
+
+"Depend upon abstractions. Do not depend upon concrete classes."
+
+A PizzaStore class that relies on dozens of concrete classes is going to be 
+messy and rigid. The PizzaStore should only depend on a Pizza abstraction,
+and the concrete classes program to that abstraction (p. 141 and onward
+explain this very well)
+
+Principle guidelines:
+
+* No variable should hold a reference to a concrete class
+* No class should derive from a concrete class
+* No method should override an implemented method of any of its base classes
